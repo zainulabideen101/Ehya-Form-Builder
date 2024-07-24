@@ -1,0 +1,162 @@
+@import './colors';
+@import './mixins';
+@import './font';
+
+
+.features{
+    width: 1140px;
+   /*  @include height-width(630px, 1140px); */
+    margin-bottom: 120px;
+   /*  background-color: $link-type3; */
+    /* background-image: linear-gradient(45deg, $link-type3); */
+    background-image: url(/images/features_bkg.png);
+  /*  background: linear-gradient(100deg, $white-color 5%, $link-type3 5%, $link-type3 100%, $white-color 15%); */
+    background-repeat: no-repeat;
+    background-position: center;
+    @include flex-direction(row); 
+    .slanted{
+        @include height-width(514px, 1140px);
+        border-radius: 8px;
+        background-color: $link-type3;
+        transform: skewY(-3deg);
+    }
+    .grid-right{
+        /* transform: skewY(3deg); */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        .oval-container, .oval-container-r{
+            &#starting{
+                margin-top: 50px;
+            }
+            @include height-width(180px, 180px);
+            padding: 62px;
+            background-color: $white-color;
+            border-radius: 8px;
+            border: 1px solid $stroke-color;
+            img{
+                @include height-width(56px, 56px);
+            }
+            
+        }
+        .oval-container-r{
+            margin-top: -50px;  
+        }
+
+    }
+}
+
+.features-left{
+    /* transform: skewY(3deg); */
+    @include flex-direction(column);
+    margin: 112px 43px 72px 97px; 
+    /* @include height-width(330px, 518px); */
+    #primary{
+        @include hero-font;
+        line-height: 60px;
+        color: $white-color;
+        font-size: 48px;
+        margin-bottom: 22px;
+        width: 381px;
+    }
+    #secondary{
+        @include font;
+        color: $white-color;
+        margin-bottom: 36px;
+        width: 518px;       
+    }
+    button{
+        @include flex-direction(row);
+        justify-content: space-around;
+        @include height-width(56px, 242px);  
+        background-color: $text-color;
+        align-items: center;
+        border-radius: 12px;
+        border: none;
+        p{
+            @include font;
+            color: $white-color;
+            line-height: auto;
+        }
+      }
+}
+
+
+@media (min-width: $min-tab) and (max-width: $max-tab) {
+    .features{
+        width: 100%;
+        background-size: 768px 443px;
+        
+        .grid-right{
+            gap: 16px;
+            .oval-container, .oval-container-r {
+                @include height-width(144px, 144px);
+                @include flex-row-center-center;
+                
+            }
+        }
+    }
+    .features-left{
+        margin: 120px 0px 65px 40px;
+        #primary{
+            @include fontsize-lineheight(32px, 40px);
+        }
+        #secondary{
+            @include fontsize-lineheight(16px, 28px);
+            width: 339px;
+            margin-bottom: 38px;
+        }
+        button{
+            @include height-width(48px, 209px);
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+
+}
+
+@media (max-width:$max-mobile) {
+    .features{
+        width: 100%;
+        background-size: 100% 611px;
+        background-position: center top;
+        flex-direction: column;
+        align-items: center;
+        .grid-right{
+            gap: 15px;
+            width: 280px;
+            .oval-container, .oval-container-r {
+                @include height-width(56px, 56px);
+                @include flex-row-center-center;
+            }
+        }
+    }
+    .features-left{
+        margin: 68px 0px 0px 0px;
+        margin-bottom: 37px;
+        align-items: center;
+        text-align: center;
+        #primary{
+            @include fontsize-lineheight(28px, 36px);
+            width: 280px;
+            margin-bottom: 14px;
+        }
+        #secondary{
+            @include fontsize-lineheight(14px, 24px);
+            width: 280px;
+            margin-bottom: 30px;
+
+        }
+        button{
+            @include height-width(48px, 220px);
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+
+
+    
+
+}

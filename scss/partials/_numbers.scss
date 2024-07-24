@@ -1,0 +1,122 @@
+@import './mixins';
+@import './font';
+@import './colors';
+@import './breakpoints';
+
+.Numbers{
+    margin-bottom: 100px;
+}
+.boxes{
+    @include flex-direction(row);
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+
+    .success-rate, .revenue, .forms{
+        @include height-width(338px, 305px);
+        @include flex-direction(column);
+        #large{
+            @include hero-font;
+            @include fontsize-weight(36px, bold);
+            color: $text-color;
+            width: auto;
+        }
+        #small{
+            @include font;
+            font-size: 18px;
+            color: $small-text;
+            width: auto;
+        }
+        justify-content: space-between;
+        align-items: center;
+        @include padding(52px, 57px);
+        border-radius: 8px;
+        border:1px solid $stroke-color;
+        img{
+            @include height-width(80px, 80px);
+        }
+    }
+}
+
+.text{
+    @include flex-direction(row);
+    justify-content: space-between;
+    margin-bottom: 56px;
+    #large{
+        @include hero-font;
+        @include fontsize-weight(36px, bold);
+        color: $text-color;
+    }
+    #small{
+        @include font;
+        color: $small-text;
+        font-size: 16px;
+        line-height: 28px;
+        width: 479px;
+    }
+}
+
+@media (min-width: $min-tab) and (max-width: $max-tab) {
+    .boxes{
+        gap: 20px;
+        .success-rate, .revenue, .forms{
+            @include height-width(282px, 220px);
+            #large{
+                @include fontsize-lineheight(28px, 36px);
+            }
+            #small{
+                @include fontsize-lineheight(14px, 24px);
+                width: max-content;
+            }
+        }
+    }
+    .text{
+
+        @include height-width(116px, 479px);
+        flex-direction: column;
+        text-align: center;
+    }    
+
+}
+
+@media (max-width: $max-mobile) {
+
+    .Numbers{
+        width: 280px;
+        margin-bottom: 64px;
+    }
+    .boxes{
+        flex-direction: column;
+        gap: 18px;
+        .success-rate, .revenue, .forms{
+            padding: 25px 0px 22px 0px;
+            /* justify-content: space-evenly; */
+            @include height-width(201px, 280px);
+            #large{
+                @include fontsize-lineheight(24px, 32px);
+            }
+            #small{
+                @include fontsize-lineheight(16px, 28px);
+                width: max-content;
+            }
+            img{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .text{
+        margin-bottom: 36px;
+        @include height-width(auto, 280px);
+        flex-direction: column;
+        text-align: center;
+        #large{
+            @include fontsize-lineheight(24px, 32px);
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        #small{
+            width: auto;
+        }
+    }    
+
+}

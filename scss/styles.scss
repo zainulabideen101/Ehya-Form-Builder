@@ -1,0 +1,26 @@
+/* @import '/scss/contact';
+@import '/scss/features'; */
+@import './partials/footer';
+@import './partials/header' ;
+@import './partials/hero-image';
+@import './partials/body';
+@import './partials/numbers';
+@import './partials/contact';
+@import './partials/testimonials';
+@import './partials/example';
+@import './partials/features';
+@import './partials/howtostart';
+@import './partials/breakpoints';
+
+/* @import '/scss/pricing';
+@import '/scss/testimonials'; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    justify-content: center;
+}

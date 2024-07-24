@@ -1,0 +1,46 @@
+@import './font';
+@import './colors';
+
+
+@mixin flex-row-center-center(){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column-center-center(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-direction($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin height-width($height, $width){
+   height: $height;
+   width: $width;
+}
+
+
+@mixin padding($vertical, $horizontal){
+    padding: $vertical $horizontal;
+}
+
+@mixin primary-text(){
+    @include hero-font;
+
+}
+
+@mixin fontsize-lineheight($font-size, $line-height){
+    font-size: $font-size;
+    line-height: $line-height;
+}
+@mixin header-res(){
+    
+
+}

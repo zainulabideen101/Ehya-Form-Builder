@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import './colors';
+
+@mixin font {
+    font-family: "Open Sans", sans-serif;
+    line-height: 32px;
+    font-size: 18px;
+    color: $small-text;
+}
+
+@mixin hero-font{
+    font-family: "Hanken Grotesk", sans-serif;
+    line-height: 48px;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    font-size: 36px;
+    color: $text-color;
+}
+
+@mixin fontsize-weight($size, $weight){
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin font60 {
+    font-size: calc(35px + (60 - 35) * (100vw - 375px) / (1440 - 375));
+}

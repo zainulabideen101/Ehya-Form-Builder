@@ -1,0 +1,246 @@
+@import './mixins';
+@import './colors';
+@import './font';
+
+.example{
+    @include height-width(901px, 1006px);
+    @include flex-direction(column);
+    margin-bottom: 100px;
+    .ex-text{
+        #primary{
+            @include hero-font;
+            margin-bottom: 20px;
+        }
+        #secondary{
+            @include font;
+            width: 810px;
+            margin-bottom: 56px;
+        }
+    }
+}
+
+.more-examples{
+    @include flex-direction(row);
+    @include height-width(66px, 918px);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    background-color: $light-grey;
+    @include padding(5px, 5px);
+    p{
+        margin-left: 30px;
+        @include font;
+        font-size: 14px;
+        line-height: 20px;
+        color: $text-color;
+    }
+    button{
+        
+        background-color: $text-color;
+        border-radius: 12px;
+        border: none;
+        @include height-width(56px, 265px);
+        @include font;
+        font-weight: bold;
+        font-size: 18px;
+        color: $white-color;
+    }
+}
+
+.ex-box{
+    @include flex-direction(column);
+    justify-content: space-between;
+    @include height-width(264px, 478px);
+
+    #primary{
+       @include hero-font;
+       font-size: 20px;
+       line-height: 24px;
+    }
+    #secondary{
+        width: 324px;
+        @include font;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.b-link{
+    @include height-width(156px, 478px);
+    border-radius: 8px;
+    border: 1px solid $link-border;
+    @include flex-direction(row);
+    align-items: center;
+    p{
+        @include hero-font;
+        line-height: 24px;
+        font-size: 20px;
+        color: $link-text;
+        margin-left: 30px;
+    }
+    
+    .left-side{
+        @include flex-direction(column);
+        justify-content: space-around;
+        border-radius: 8px 0px 0px 8px;
+        @include height-width(156px, 390px);
+        img{
+            margin-left: 30px;
+        }
+        &#type1{
+            background-color: $header-button;
+            img{
+                @include height-width(32px,32px);
+            }
+        }
+        &#type2{
+            background-color: $link-type2;
+            img{
+                @include height-width(32px,24px);
+            }
+        }
+        &#type3{
+            background-color: $link-type3;
+            img{
+                @include height-width(32px,28px);
+            }
+        }
+        &#type4{
+            background-color: $link-type4;
+            img{
+                @include height-width(32px,32px);
+            }
+        }
+    }
+}
+
+.link-button{
+    border-radius: 2000px;
+    @include height-width(68px, 48px);
+    background-color: $white-color;
+    @include flex-row-center-center;
+    margin-left: -24px;
+}
+
+.example-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 69px;
+}
+
+@media (min-width: $min-tab) and (max-width: $max-tab) {
+    .example{
+        @include height-width(820px, 679px);
+        .ex-text{
+            #primary{
+                @include fontsize-lineheight(32px, 40px);
+            }
+            #secondary{
+                @include fontsize-lineheight(16px, 28px);
+                width: 546px;
+            }
+        }
+    }
+    
+    .ex-box{
+        @include height-width(240px, 321px);
+        #primary{
+            @include fontsize-lineheight(18px, 22px);
+        }
+        #secondary{
+            @include fontsize-lineheight(14px, 24px);
+        }
+        .b-link{
+            @include height-width(134px, 321px);
+            .left-side{
+                @include height-width(134px, 290px);
+                p{
+                    @include fontsize-lineheight(16px, 20px);
+                }
+                img,p{
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+    .more-examples{
+        @include height-width(66px, 679px);
+        p{
+            margin-left: 20px;
+        }
+        button{
+            width: 245px;
+        }
+    }
+    
+}
+
+@media (max-width: $max-mobile) {
+    .example{
+        @include height-width(auto, 280px);
+        margin-bottom: 56px;
+        .ex-text{
+            #primary{
+                @include fontsize-lineheight(28px, 36px);
+                text-align: center;
+                margin-bottom: 16px;
+            }
+            #secondary{
+                @include fontsize-lineheight(16px, 28px);
+                width: auto;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    
+    .ex-box{
+        @include height-width(auto, 280px);
+        #primary{
+            @include fontsize-lineheight(18px, 22px);
+            margin-bottom: 8px;
+
+        }
+        #secondary{
+            @include fontsize-lineheight(14px, 24px);
+            width: 260px;
+            margin-bottom: 24px;
+        }
+
+        .b-link{
+            @include height-width(auto, 280px);
+            margin-bottom: 25px;
+
+            .left-side{
+                @include height-width(147px, 230px);
+                p{
+                    @include fontsize-lineheight(16px, 20px);
+                }
+                img,p{
+                    margin-left: 16px;
+                }
+            }
+        }
+
+    }
+
+    .more-examples{
+        @include height-width(66px, 679px);
+        p{
+            margin-left: 20px;
+        }
+        button{
+            width: 245px;
+        }
+    }
+    
+    .example-grid{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .more-examples{
+        flex-direction: column;
+        @include height-width(158px, 280px);
+    }
+}

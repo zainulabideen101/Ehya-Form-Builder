@@ -1,0 +1,6 @@
+@import './mixins';
+
+
+body{
+    @include flex-column-center-center();
+};

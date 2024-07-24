@@ -1,0 +1,244 @@
+@import './colors';
+@import './mixins';
+@import './font';
+
+.howtostart{
+    background-image: linear-gradient(to bottom, $howtostart , $white-color);
+    width: 1340px;
+    @include flex-direction(column);
+    align-items: center;
+    .top-text{
+        .primary{
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .secondary{
+           /*  width: 690px; */
+            text-align: center;
+        }
+    }
+
+    .bottom-text{
+        @include flex-direction(column);
+        align-items: center;
+        .primary{
+            line-height: 36px;
+            font-size: 28px;
+            text-align: center;
+        }
+        .secondary{
+            width: 457px;  
+            text-align: center;
+        }
+        img{
+            @include height-width(64px, 64px);
+        }
+    }
+}
+
+.dotted-line-1-tabview, .dotted-line-2-tabview, .dotted-line-3-tabview{
+    display: none;
+}
+
+
+.primary{
+    @include hero-font;
+    
+}
+
+.secondary{
+    @include font;
+}
+
+.step1, .step2, .step3{
+    @include flex-direction(row);
+    align-items: center;
+    .step-header{
+        @include flex-direction(row);
+        align-items: center;  
+    }
+}
+.step1{
+    img{
+        @include height-width(268px, 448px);
+    }
+}
+
+.step2{
+    img{
+        @include height-width(263px, 448px);
+    }
+}
+
+.step3{
+    img{
+        @include height-width(360px, 448px);
+    }
+}
+
+
+.step-right-container{
+    width: 457px;
+    @include flex-direction(column);
+}
+
+.steps{
+    margin: 80px 0px;
+    @include flex-direction(column);
+    align-items: center;
+    button{
+        border: none;
+        border-radius: 8px;
+        background-color: $golden-color;
+        color: $white-color;
+        @include height-width(33px, 62px);
+        margin-right: 20px;
+    }
+}
+
+.dotted-line-1, .dotted-line-2, .dotted-line-3{
+    margin: 30px 0px;
+}
+
+.dotted-line-1{
+    @include height-width(160px, 444px);
+    img{
+        @include height-width(160px, 444px);
+    }
+}
+
+@media (min-width: $min-tab) and (max-width: $max-tab) {
+    .howtostart{
+        width: 100%;
+    }
+    .top-text{
+        .primary{
+            @include fontsize-lineheight(32px, 40px);
+            margin-bottom: 20px;
+        }
+        .secondary{
+            @include fontsize-lineheight(16px, 28px);
+            margin-bottom: 38px;
+        }
+    }
+    .steps{
+        margin-bottom: 72px;
+    }
+    .step1, .step2, .step3{
+        flex-direction: column;
+        img{
+            margin-bottom: 24px;
+        }
+    }
+
+    .step-right-container{
+        .step-header{
+            flex-direction: column;
+        }
+        p{
+            text-align: center;
+        }
+    }
+
+    .step2{
+        flex-direction: column-reverse;
+    }
+
+    .dotted-line-1, .dotted-line-2, .dotted-line-3{
+        display: none;
+    }
+
+    .dotted-line-1-tabview, .dotted-line-2-tabview, .dotted-line-3-tabview{
+        display: block;
+        margin: 36px 0px;
+    }
+    
+
+}
+
+
+
+@media (max-width: $max-mobile) {
+    .howtostart{
+        width: 100%;
+        margin-bottom: 36px;
+        background-image: linear-gradient(to bottom, $howtostart, $howtostart);
+        .bottom-text{
+            .primary{
+                @include fontsize-lineheight(24px, 32px);
+            }
+            .secondary{
+
+                width: 280px;
+                @include fontsize-lineheight(14px, 24px);
+
+            }
+            img{
+                margin-bottom: 28px;
+            }
+        }
+
+    }
+    .top-text{
+        .primary{
+            @include fontsize-lineheight(28px, 36px);
+            margin-bottom: 16px;
+            width: 280px;
+        }
+        .secondary{
+            @include fontsize-lineheight(14px, 24px);
+            width: 290px;
+            margin-bottom: 72px;
+        }
+    }
+    .steps{
+        margin-bottom: 72px;
+    }
+    .step1, .step2, .step3{
+
+        flex-direction: column;
+        img{
+            width: 280px;
+            height: auto;
+            margin-bottom: 24px;
+        }
+    }
+
+    .step-right-container{
+        width: 280px;
+        gap: 14px;
+        /* align-items: center;
+        justify-content: center; */
+        .step-header{
+            width: 280px;
+            flex-direction: column;
+            gap: 22px;
+            button{
+                margin-right: 0px;
+            }
+        }
+        p{
+            @include fontsize-lineheight(14px, 24px);
+            width: 280px;
+            text-align: center;
+        }
+    }
+
+    .step2{
+        flex-direction: column-reverse;
+    }
+
+    .dotted-line-1, .dotted-line-2, .dotted-line-3{
+        display: none;
+    }
+
+    .dotted-line-1-tabview, .dotted-line-2-tabview, .dotted-line-3-tabview{
+        display: block;
+        img{
+            height: 27px;
+        }
+        margin: 20px 0px;
+    }
+
+    
+}
