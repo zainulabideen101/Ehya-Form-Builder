@@ -5,6 +5,8 @@
 
 .Numbers{
     margin-bottom: 100px;
+    @include flex-column-center-center;
+
 }
 .boxes{
     @include flex-direction(row);
@@ -41,6 +43,7 @@
 .text{
     @include flex-direction(row);
     justify-content: space-between;
+    gap: 1rem;
     margin-bottom: 56px;
     #large{
         @include hero-font;
@@ -118,5 +121,13 @@
             width: auto;
         }
     }    
+
+}
+
+@media (min-width: $min-lap) and (max-width: $max-lap) {
+    .Numbers{
+        width: 100%;
+        /* border-radius: 0px; */
+    }
 
 }

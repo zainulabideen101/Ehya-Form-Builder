@@ -10,7 +10,8 @@
    /*  background-color: $link-type3; */
     /* background-image: linear-gradient(45deg, $link-type3); */
     background-image: url(/images/features_bkg.png);
-  /*  background: linear-gradient(100deg, $white-color 5%, $link-type3 5%, $link-type3 100%, $white-color 15%); */
+    /* background: linear-gradient(178deg, #fff 9%, #00B8D8 9%, #00B8D9 86%, #fff 10%); */
+    // background: linear-gradient(120deg, $white-color 5%, $link-type3 5%, $link-type3 15%, $white-color 15%);
     background-repeat: no-repeat;
     background-position: center;
     @include flex-direction(row); 
@@ -85,19 +86,26 @@
 @media (min-width: $min-tab) and (max-width: $max-tab) {
     .features{
         width: 100%;
-        background-size: 768px 443px;
+        background-size: 100% 425px;
         
+        justify-content: space-around;
         .grid-right{
             gap: 16px;
             .oval-container, .oval-container-r {
                 @include height-width(144px, 144px);
                 @include flex-row-center-center;
+                &#starting{
+                    margin-top: 40px;
+                }
                 
+            }
+            .oval-container-r{
+                margin-top: -40px;  
             }
         }
     }
     .features-left{
-        margin: 120px 0px 65px 40px;
+        margin: 82px 0px 0px 0px;
         #primary{
             @include fontsize-lineheight(32px, 40px);
         }
@@ -158,5 +166,16 @@
 
 
     
+
+}
+
+@media (min-width: $min-lap) and (max-width: $max-lap) {
+    .features{
+        width: 100%;
+        /* border-radius: 0px; */
+    }
+    /* .features-left{
+        margin: 0px 0px 0px 0px;
+    } */
 
 }
