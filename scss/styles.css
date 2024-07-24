@@ -247,6 +247,10 @@ header .nav {
   font-size: 16px;
   color: #fff;
 }
+.hero-buttons #left:hover {
+  background-color: #fff;
+  color: #183B56;
+}
 .hero-buttons #right {
   background-color: #fff;
   height: 56px;
@@ -283,6 +287,10 @@ a {
   border-radius: 8px;
   padding: 10px;
   border: 2px solid #1565D8;
+}
+.header-button:hover {
+  background-color: #1565D8;
+  color: #fff;
 }
 
 .header-container {
@@ -723,6 +731,10 @@ body {
   line-height: 0px;
   color: #fff;
 }
+.buttons #primary:hover {
+  background-color: #fff;
+  color: #FAAD13;
+}
 .buttons #secondary {
   background-color: transparent;
   border: 1px solid #fff;
@@ -742,6 +754,10 @@ body {
 .buttons #secondary img {
   height: 18px;
   width: 18px;
+}
+.buttons #secondary:hover {
+  background-color: #FAAD13;
+  color: #fff;
 }
 
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -1013,6 +1029,10 @@ body {
   font-weight: bold;
   font-size: 18px;
   color: #fff;
+}
+.more-examples button:hover {
+  background-color: #fff;
+  color: #183B56;
 }
 
 .ex-box {
@@ -1337,7 +1357,17 @@ body {
   color: #fff;
   line-height: auto;
 }
+.features-left button:hover {
+  animation-name: transformx;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
 
+@keyframes transformx {
+  50% {
+    transform: translateX(0.5em);
+  }
+}
 @media (min-width: 767px) and (max-width: 1023px) {
   .features {
     width: 100%;
@@ -1433,9 +1463,9 @@ body {
     width: 100%;
     /* border-radius: 0px; */
   }
-  /* .features-left{
-      margin: 0px 0px 0px 0px;
-  } */
+  .features-left {
+    margin-right: 0px;
+  }
 }
 .howtostart {
   background-image: linear-gradient(to bottom, #F7F8F9, #fff);
@@ -1449,8 +1479,9 @@ body {
   text-align: center;
 }
 .howtostart .top-text .secondary {
-  /*  width: 690px; */
+  width: 690px;
   text-align: center;
+  margin-bottom: 84px;
 }
 .howtostart .bottom-text {
   display: flex;
@@ -1501,6 +1532,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.step1 img:hover, .step2 img:hover, .step3 img:hover {
+  animation-name: picanimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 .step1 img {
@@ -1557,6 +1593,11 @@ body {
   width: 444px;
 }
 
+@keyframes picanimation {
+  50% {
+    transform: translateY(0.25em);
+  }
+}
 @media (min-width: 767px) and (max-width: 1023px) {
   .howtostart {
     width: 100%;
@@ -1615,13 +1656,13 @@ body {
   .howtostart .bottom-text img {
     margin-bottom: 28px;
   }
-  .top-text .primary {
+  .howtostart .top-text .primary {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 16px;
     width: 280px;
   }
-  .top-text .secondary {
+  .howtostart .top-text .secondary {
     font-size: 14px;
     line-height: 24px;
     width: 290px;

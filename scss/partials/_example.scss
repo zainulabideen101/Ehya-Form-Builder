@@ -44,6 +44,10 @@
         font-weight: bold;
         font-size: 18px;
         color: $white-color;
+        &:hover{
+            background-color: $white-color;
+            color: $text-color;
+        }
     }
 }
 

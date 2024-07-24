@@ -79,7 +79,16 @@
             color: $white-color;
             line-height: auto;
         }
+        &:hover{
+            animation-name: transformx;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+        }
       }
+}
+
+@keyframes transformx {
+    50%{  transform: translateX(0.5em);}
 }
 
 
@@ -174,8 +183,9 @@
         width: 100%;
         /* border-radius: 0px; */
     }
-    /* .features-left{
-        margin: 0px 0px 0px 0px;
-    } */
-
+    
+    
+    .features-left{
+        margin-right: 0px;
+    }
 }

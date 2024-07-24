@@ -13,8 +13,9 @@
             text-align: center;
         }
         .secondary{
-           /*  width: 690px; */
+            width: 690px;
             text-align: center;
+            margin-bottom: 84px;
         }
     }
 
@@ -57,6 +58,13 @@
     .step-header{
         @include flex-direction(row);
         align-items: center;  
+    }
+    img{
+        &:hover{
+            animation-name: picanimation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+        }
     }
     
 }
@@ -113,6 +121,13 @@
     }
 }
 
+
+@keyframes picanimation {
+    50%{
+        transform: translateY(0.25em);
+    }
+}
+
 @media (min-width: $min-tab) and (max-width: $max-tab) {
     .howtostart{
         width: 100%;
@@ -134,6 +149,7 @@
         flex-direction: column;
         img{
             margin-bottom: 24px;
+           
         }
     }
 
@@ -183,20 +199,20 @@
                 margin-bottom: 28px;
             }
         }
-
-    }
-    .top-text{
-        .primary{
-            @include fontsize-lineheight(28px, 36px);
-            margin-bottom: 16px;
-            width: 280px;
+        .top-text{
+            .primary{
+                @include fontsize-lineheight(28px, 36px);
+                margin-bottom: 16px;
+                width: 280px;
+            }
+            .secondary{
+                @include fontsize-lineheight(14px, 24px);
+                width: 290px;
+                margin-bottom: 72px;
+            }
         }
-        .secondary{
-            @include fontsize-lineheight(14px, 24px);
-            width: 290px;
-            margin-bottom: 72px;
-        }
     }
+    
     .steps{
         margin-bottom: 72px;
     }

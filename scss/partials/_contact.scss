@@ -57,6 +57,10 @@
         @include fontsize-weight(18px, bold);
         line-height: 0px;
         color: $white-color;
+        &:hover{
+            background-color: $white-color;
+            color: $golden-color;
+        }
     }
     #secondary{
 
@@ -69,6 +73,10 @@
         line-height: 0px;
         img{
             @include height-width(18px,18px);
+        }
+        &:hover{
+            background-color: $golden-color;
+            color: $white-color;
         }
     }
 }

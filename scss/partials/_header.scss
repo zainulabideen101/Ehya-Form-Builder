@@ -30,6 +30,10 @@ header{
         font-weight: (bold);
         font-size: 16px;
         color: $white-color;
+        &:hover{
+            background-color: $white-color;
+            color: $text-color;
+        }
     }
 
     & #right{
@@ -62,6 +66,10 @@ a{
     border-radius: 8px;
     padding: 10px;
     border: 2px solid $header-button;
+    &:hover{
+        background-color: $header-button;
+        color: $white-color;
+    }
 }
 .header-container {
     display: flex;
