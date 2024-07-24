@@ -266,6 +266,10 @@ header .nav {
   font-weight: 600;
   color: #183B56;
 }
+.hero-buttons #right:hover {
+  background-color: #183B56;
+  color: #fff;
+}
 
 a {
   color: #183B56;
@@ -522,7 +526,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 52px 57px;
+  padding: 52px 0px;
   border-radius: 8px;
   border: 1px solid #ECEEF2;
 }
@@ -863,12 +867,12 @@ body {
   }
 }
 .testimonials {
-  margin-left: 150px;
+  margin-left: 25%;
   margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   gap: 30px;
-  width: calc(100% - 150px);
+  width: 75%;
   overflow-x: scroll;
 }
 .testimonials .testimonial, .testimonials .testimonial-l {
@@ -1392,7 +1396,7 @@ body {
     margin-top: -40px;
   }
   .features-left {
-    margin: 82px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
   }
   .features-left #primary {
     font-size: 32px;
@@ -1461,6 +1465,7 @@ body {
 @media (min-width: 1023px) and (max-width: 1439px) {
   .features {
     width: 100%;
+    justify-content: space-around;
     /* border-radius: 0px; */
   }
   .features-left {

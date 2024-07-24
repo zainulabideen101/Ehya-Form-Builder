@@ -114,7 +114,7 @@
         }
     }
     .features-left{
-        margin: 82px 0px 0px 0px;
+        margin: 100px 0px 0px 0px;
         #primary{
             @include fontsize-lineheight(32px, 40px);
         }
@@ -181,10 +181,10 @@
 @media (min-width: $min-lap) and (max-width: $max-lap) {
     .features{
         width: 100%;
+        justify-content: space-around;
         /* border-radius: 0px; */
     }
-    
-    
+       
     .features-left{
         margin-right: 0px;
     }
