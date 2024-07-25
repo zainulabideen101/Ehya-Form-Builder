@@ -10,13 +10,18 @@
     gap: 30px;
     width: 95%;
     overflow-x: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+      padding-bottom: 1rem;
     .testimonial, .testimonial-l{
+        
         @include padding(25px, 30px);
         background-color: $white-color;
         @include flex-direction(column);
         justify-content: space-between;
         border-radius: 16px;
-        box-shadow: #000 0.01 0px 3px 3px 0px;
+        box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
         height: 229px;
         img{
             @include height-width(16px, 120.72px);
@@ -68,7 +73,7 @@
         .testimonial, .testimonial-l{
             padding: 28px 20px 26px 30px;
             .reviewbox{
-                width: auto;
+                width: 220px;
             }
             #review{
                 line-height: 24px;
@@ -94,7 +99,7 @@
         }
        
         .testimonial, .testimonial-l{
-            padding: 0px 0px 0px 0px;
+            padding: 6px 6px 6px 10px;
             .reviewbox{
                 /* width: auto; */
             }

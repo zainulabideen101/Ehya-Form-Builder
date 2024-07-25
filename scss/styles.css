@@ -779,6 +779,10 @@ body {
   gap: 30px;
   width: 95%;
   overflow-x: scroll;
+  padding-bottom: 1rem;
+}
+.testimonials::-webkit-scrollbar {
+  display: none;
 }
 .testimonials .testimonial, .testimonials .testimonial-l {
   padding: 25px 30px;
@@ -787,7 +791,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 16px;
-  box-shadow: #000 0.01 0px 3px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   height: 229px;
 }
 .testimonials .testimonial img, .testimonials .testimonial-l img {
@@ -849,7 +853,7 @@ body {
     padding: 28px 20px 26px 30px;
   }
   .testimonials .testimonial .reviewbox, .testimonials .testimonial-l .reviewbox {
-    width: auto;
+    width: 220px;
   }
   .testimonials .testimonial #review, .testimonials .testimonial-l #review {
     line-height: 24px;
@@ -870,7 +874,7 @@ body {
     width: 240px;
   }
   .testimonials .testimonial, .testimonials .testimonial-l {
-    padding: 0px 0px 0px 0px;
+    padding: 6px 6px 6px 10px;
   }
   .testimonials .testimonial .reviewbox, .testimonials .testimonial-l .reviewbox {
     /* width: auto; */
@@ -1200,6 +1204,7 @@ body {
   gap: 20px;
 }
 .features .grid-right .oval-container, .features .grid-right .oval-container-r {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   height: 180px;
   width: 180px;
   padding: 62px;
