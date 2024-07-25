@@ -1,8 +1,7 @@
 /* @import '/scss/contact';
 @import '/scss/features'; */
 @import './partials/footer';
-@import './partials/header' ;
-@import './partials/hero-image';
+@import './partials/hero-section' ;
 @import './partials/body';
 @import './partials/numbers';
 @import './partials/contact';
@@ -11,9 +10,9 @@
 @import './partials/features';
 @import './partials/howtostart';
 @import './partials/breakpoints';
-
-/* @import '/scss/pricing';
-@import '/scss/testimonials'; */
+@import './partials/buttons';
+@import './partials/header_container';
+@import './partials/links';
 
 *{
     margin: 0;

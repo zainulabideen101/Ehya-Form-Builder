@@ -3,17 +3,13 @@
 @import './font';
 @import './breakpoints';
 
-header{
+.hero-section{
     @include flex-direction(column);
     justify-content: start;
     align-items: center;
-    background-image: url(/images/header-bkg.png);
-    @include height-width(1013px, 100%);
-    .nav{
-        @include flex-direction(row);
-        justify-content: space-around;
-        @include height-width(22px,423px);
-    }
+    background-color: rgb(255,247,232);
+    @include height-width(100vh, 100%);
+    
 }
 
 .hero-buttons{
@@ -53,64 +49,21 @@ header{
     }
 }
 
-a{
-    color: $text-color;
-    text-decoration: none;
-}
 
-
-.header-button{
-    background-color: transparent;
-    @include font;
-    font-size: 16px;
-    line-height: 0px;
-    font-weight: bold;
-    color: $header-button;
-    @include height-width(48px, 131px);
-    border-radius: 8px;
-    padding: 10px;
-    border: 2px solid $header-button;
-    &:hover{
-        background-color: $header-button;
-        color: $white-color;
-    }
-}
-.header-container {
-    display: flex;
-    flex-direction: row;
-   @include height-width(100px, 1140px);
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 90px;
-    /* position: sticky;
-    top: 0;
-    z-index: 10; */
-}
-i{
-    color: #183B56;
-}
-.header-left {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 10px;
-    align-items: center;
-    .navbar-links{
-        display: flex;
-    }
-}
 .hero-img{
     align-self: center;
     margin-bottom: 80px;
     @include flex-row-center-center;
     img{
-        @include height-width(623px, 1005px);  
-        margin-top: -440px; 
+        @include height-width(auto, 80%);  
+        margin-top: -20vh; 
     }
 }
 
 .hero-text{
     /* @include height-width(136px, 540px); */
     margin-bottom: 24px;
+    margin-top: calc(100px + 10vh);
     p{
         /* @include hero-font; */
         font-family: HK Grotesk, "Bold";
@@ -125,6 +78,7 @@ i{
 }
 
 .small-text{
+    text-align: center;
     @include height-width(32px, 487px);
     margin-bottom: 48px;
     p{
@@ -139,53 +93,12 @@ i{
     }
     
 }
-.header-left >{ 
-    img {
-        width: 125px;
-    }
 
-}
-
-.burgermenu{
-    display: none;
-    background-color: transparent;
-    border: none;
-}
-
-.header-right {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 10px;
-    align-items: center;
-}
-
-.header-right > {
-    .header-right-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    }
-}
 
 @media (min-width:$min-tab) and (max-width: $max-tab){
-    header{
+    .hero-section{
         @include height-width(665px, 100%);
-        .header-container{
-            .header-left{
-                img{
-                    @include height-width(24px, 77.14px)
-                }
-            }
-            @include height-width(64px, 85%);
-            justify-content: space-between;
-            .nav, button{
-                display: none;
-            }
-            .burgermenu{
-                display: block;
-            }
-        }
+        
         .hero-text{
             p{
                 @include fontsize-lineheight(48px, 60px);
@@ -208,28 +121,15 @@ i{
 }
 
 @media (max-width: $max-mobile) {
-    header{
+    .hero-section{
         text-align: center;
         @include height-width(508px, 100%);
-        .header-container{
-            margin-bottom: 32px;
-            .header-left{
-                img{
-                    @include height-width(24px, 77.14px)
-                }
-            }
-            @include height-width(64px, 85%);
-            justify-content: space-between;
-            .nav, button{
-                display: none;
-            }
-            .burgermenu{
-                display: block;
-            }
-        }
+        
         .hero-text{
             /* width: 300px; */
-            margin: 0px 10px;
+            /* margin: 10px; */
+            margin-right: 10px;
+            margin-left: 10px;
             margin-bottom: 16px;
             p{
                 @include fontsize-lineheight(32px, 40px);
@@ -248,11 +148,12 @@ i{
         margin-bottom: 56px;
         img{
             @include height-width(auto, 90%);  
-            margin-top: -24px; 
+            margin-top: -7%;
         }
     }
     .hero-buttons{
-        @include flex-column-center-center;
+        @include flex-row-center-center;
+        flex-wrap: wrap;
         gap: 16px;
         #left, #right{
             @include height-width(48px, 260px);
@@ -261,10 +162,26 @@ i{
     }
 }
 
-@media (min-width: $min-lap) and (max-width: $max-lap) {
-    .header-container{
-        width: 100%;
-        /* border-radius: 0px; */
+@media (min-width: $min-1700px) {
+    .hero-img{
+        img{
+            margin-top: -30vh;
+        }
     }
+}
 
+@media (min-width: $min-2200px) {
+    .hero-img{
+        img{
+            margin-top: -40vh;
+        }
+    }
+}
+
+@media (min-width: $min-4k) {
+    .hero-img{
+        img{
+            margin-top: -50vh;
+        }
+    }
 }

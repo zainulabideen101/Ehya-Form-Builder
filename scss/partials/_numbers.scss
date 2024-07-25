@@ -85,11 +85,13 @@
 @media (max-width: $max-mobile) {
 
     .Numbers{
-        width: 280px;
+        width: 90%;
         margin-bottom: 64px;
     }
     .boxes{
-        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
+        /* flex-direction: column; */
         gap: 18px;
         .success-rate, .revenue, .forms{
             padding: 25px 0px 22px 0px;
@@ -109,7 +111,7 @@
     }
     .text{
         margin-bottom: 36px;
-        @include height-width(auto, 280px);
+        @include height-width(auto, 90%);
         flex-direction: column;
         text-align: center;
         #large{
